@@ -62,11 +62,23 @@ for (let i = 0; i < team.length; i++) {
 
 
 //Milestone 2 - Stampa come JSON su HTML
-let myString = JSON.stringify(team);
+// let myString = JSON.stringify(team);
 
-document.getElementById("teamsection").innerHTML = myString;
+// document.getElementById("teamsection").innerHTML = myString;
+
+//Milestone 2 - Stampa come txt su HTML
 
 
+const teamList = document.querySelector(".teamsection");
+
+for (let i = 0; i < team.length; i++) {
+
+    const newListItem = document.createElement("li");
+
+    newListItem.innerHTML = team[i].name + '-' + team[i].role + '-' + team[i].photo;
+
+    teamList.append(newListItem);
+}
 
 
 
